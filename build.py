@@ -210,6 +210,8 @@ def trust_strip():
         items.append((ICON_CHECK, f"Halal MUI No. {e(certs['halal_number'].strip())}"))
     if certs["pirt_number"].strip():
         items.append((ICON_CHECK, f"PIRT No. {e(certs['pirt_number'].strip())}"))
+    if certs["nkv_number"].strip():
+        items.append((ICON_CHECK, f"NKV No. {e(certs['nkv_number'].strip())}"))
     items.append((ICON_COD, f"COD untuk {ph(shop['cod_areas'], 'area COD')}"))
     items.append((ICON_BOX, "Botol pecah di jalan? Kami ganti"))
     lis = "".join(f"<li>{ic}<span>{txt}</span></li>" for ic, txt in items)
@@ -232,7 +234,7 @@ def forest():
     return f'''<section class="section" id="hutan" aria-labelledby="h-hutan">
 <div class="container">
 <h2 id="h-hutan">Dari Hutan Baduy, Bukan dari Pabrik</h2>
-<p class="lead">Madu Mamitrasa berasal dari lebah liar di hutan Baduy, Lebak, Banten. Kami bekerja langsung dengan para pemanen, memanen secukupnya, dan membotolkannya tanpa campuran apa pun, dengan pengawasan dan bimbingan oleh dinas KPKP (Ketahanan Pangan, Kelautan, dan Pertanian) DKI Jakarta.</p>
+<p class="lead">Madu Mamitrasa berasal dari lebah liar di hutan Baduy, Lebak, Banten. Kami bekerja langsung dengan para pemanen, memanen secara tradisional agar koloni lebah dan hutan tetap lestari, dan membotolkannya tanpa campuran apa pun, dengan pengawasan dan bimbingan oleh dinas KPKP (Ketahanan Pangan, Kelautan, dan Pertanian) DKI Jakarta.</p>
 <div class="forest-media">
 <div class="video">{facade}</div>
 <ul class="photos" role="group" aria-label="Foto panen madu, geser untuk melihat lainnya" tabindex="0">{photos}</ul>
@@ -252,6 +254,13 @@ def genuine():
 <div class="container narrow">
 <h2 id="h-asli">Kenapa Warna dan Rasanya Bisa Berbeda?</h2>
 <p class="lead">Lebah hutan mengambil nektar dari bunga yang berbeda-beda di setiap musim. Karena itu, warna, kekentalan dan rasa madu kami bisa berubah dari panen ke panen. Bagi kami, itu tanda madu alami, bukan buatan pabrik.</p>
+<ul class="checks" aria-label="Keunggulan madu Mamitrasa">
+<li>100% madu hutan asli</li>
+<li>Bukan madu ternak</li>
+<li>Tanpa campuran</li>
+<li>Tanpa tambahan gula</li>
+<li>Tanpa rekayasa</li>
+</ul>
 <p class="small">Cara sederhana di rumah hanya petunjuk awal. Bukti paling pasti adalah uji laboratorium.</p>
 {lab}
 <p>{wa_btn("Pesan via WhatsApp", "WEB-M")}</p>
@@ -352,6 +361,7 @@ def about_and_footer(year):
     reg = "®" if biz["trademark_registered"] else ""
     num = wa_number()
     num_txt = f"+62 {e(num)}" if num else ph("", "nomor WhatsApp")
+    nkv = f' · NKV No. {e(certs["nkv_number"].strip())}' if certs["nkv_number"].strip() else ""
     pirt = f' · PIRT No. {e(certs["pirt_number"].strip())}' if certs["pirt_number"].strip() else ""
     halal = f' · Halal MUI No. {e(certs["halal_number"].strip())}' if certs["halal_number"].strip() else ""
     return f'''<section class="section" id="tentang" aria-labelledby="h-tentang">
@@ -373,7 +383,7 @@ def about_and_footer(year):
 <li>TikTok: <a href="{e(biz["tiktok_profile_url"])}" target="_blank" rel="noopener">{e(biz["tiktok_handle"])}</a></li>
 <li>{ph(biz["address"], "alamat/area")}</li>
 </ul>
-<p class="small">© {year} {e(biz["legal_name"])}{reg}{halal}{pirt}</p>
+<p class="small">© {year} {e(biz["legal_name"])}{reg}{halal}{pirt}{nkv}</p>
 </div>
 </footer>'''
 
@@ -425,7 +435,7 @@ def head(year):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
-<meta name="theme-color" content="#2F5D3A">
+<meta name="theme-color" content="#1F4A2E">
 {canon}
 <meta property="og:type" content="website">
 <meta property="og:locale" content="id_ID">

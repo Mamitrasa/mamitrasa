@@ -66,6 +66,9 @@ shelf_life = ""
 # Halal MUI/BPJPH certificate number. Empty = badge hidden.
 halal_number = ""
 
+# NKV (Nomor Kontrol Veteriner) number. Empty = badge hidden.
+nkv_number = ""
+
 # PIRT number. Empty = badge hidden.
 pirt_number = ""
 

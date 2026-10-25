@@ -1,4 +1,4 @@
-:root{--amber:#E0A526;--amber-d:#8A5A00;--forest:#2F5D3A;--forest-d:#244A2E;--bg:#FBF7EE;--alt:#F4ECD8;--text:#2B1B0E;--muted:#5C4A38;--line:#E3D7BC;--r:14px}
+:root{--amber:#D4AF37;--amber-d:#8A6D12;--forest:#1F4A2E;--forest-d:#163820;--bg:#FFFFFF;--alt:#F6F3EA;--text:#1B1A14;--muted:#575244;--line:#E6DFC9;--r:10px}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -110,3 +110,36 @@ body{padding-bottom:0}
 .reviews.reviews{grid-template-columns:repeat(3,1fr)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky-bar{transition:none}}
+.checks{list-style:none;margin:0 0 1em;padding:0;display:grid;gap:6px}
+.checks li{padding-left:28px;position:relative;font-weight:600}
+.checks li::before{content:"✓";position:absolute;left:0;color:var(--forest);font-weight:700}
+
+/* Premium look: forest green, gold, white */
+h1,h2,h3{letter-spacing:.01em}
+h2{position:relative;padding-bottom:.55em}
+h2::after{content:"";position:absolute;left:0;bottom:0;width:56px;height:3px;background:var(--amber)}
+.center h2::after,.narrow h2::after{left:0}
+.topbar{background:var(--forest);border:0}
+.brand{color:var(--amber);letter-spacing:.18em;text-transform:uppercase;font-size:1.05rem}
+.hero{background:var(--forest);color:#fff;padding:40px 0 52px}
+.hero h1{color:#fff}
+.hero .lead{color:#E9E4D0}
+.hero :focus-visible{outline-color:var(--amber)}
+.hero .btn-secondary{color:#fff;border-color:#fff}
+.hero .btn-secondary:hover{background:rgba(255,255,255,.12)}
+.hero-img img{border-radius:var(--r);border:2px solid var(--amber)}
+.trust{background:#fff;color:var(--forest);border-bottom:1px solid var(--line)}
+.trust .icon{color:var(--amber-d)}
+.trust li{font-weight:600}
+.btn-primary{background:var(--amber);border-color:var(--amber);color:#1B1A14}
+.btn-primary:hover{background:#E0BE4C}
+.btn-secondary:hover{background:#EDF2EC}
+.card{border:1px solid var(--line);border-top:3px solid var(--amber);box-shadow:0 6px 18px rgba(31,74,46,.08)}
+.badge{background:var(--amber);color:#1B1A14}
+.price{color:var(--forest)}
+.alt{background:var(--alt)}
+.checks li::before{color:var(--amber-d)}
+.footer{background:var(--forest-d);color:#EDE8D6}
+.footer a{color:var(--amber)}
+.section{padding:56px 0}
+@media (min-width:768px){.section{padding:88px 0}}
