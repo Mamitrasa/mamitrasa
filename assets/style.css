@@ -143,3 +143,7 @@ h2::after{content:"";position:absolute;left:0;bottom:0;width:56px;height:3px;bac
 .footer a{color:var(--amber)}
 .section{padding:56px 0}
 @media (min-width:768px){.section{padding:88px 0}}
+.topbar{background:#fff;border-bottom:2px solid var(--amber);padding:8px 0}
+.brand{display:inline-flex;align-items:center;min-height:44px}
+.brand img{height:44px;width:auto;border-radius:0}
+@media (min-width:768px){.brand img{height:56px}}

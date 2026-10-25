@@ -403,7 +403,7 @@ def head(year):
            "sameAs": [biz["tiktok_profile_url"]]}
     if SITE:
         org["url"] = SITE + "/"
-        org["logo"] = f"{SITE}/images/apple-touch-icon.png"
+        org["logo"] = f"{SITE}/images/logo.png"
     if wa_number():
         org["contactPoint"] = {"@type": "ContactPoint", "telephone": f"+62{wa_number()}",
                                "contactType": "customer service", "availableLanguage": "id"}
@@ -450,7 +450,6 @@ def head(year):
 <meta name="twitter:title" content="{e(title)}">
 <meta name="twitter:description" content="{e(desc)}">
 <meta name="twitter:image" content="{e(og_img)}">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 {ld_html}
@@ -473,7 +472,7 @@ def build():
 </section>'''
     body = f'''<body>
 <a class="skip" href="#utama">Lewati ke konten utama</a>
-<header class="topbar"><div class="container"><span class="brand">Mamitrasa</span></div></header>
+<header class="topbar"><div class="container"><a class="brand" href="./"><picture><source type="image/webp" srcset="images/logo-header.webp"><img src="images/logo-header.png" width="312" height="120" alt="Mamitrasa, Tradisional Indonesia" decoding="async" fetchpriority="high"></picture></a></div></header>
 <main id="utama">
 {hero}
 {trust_strip()}

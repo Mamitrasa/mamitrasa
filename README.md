@@ -50,7 +50,7 @@ version for slow phones. Then run `python3 build.py`.
 | `product-4` | 800×800 | Gift set |
 | `owner` | 800×1000 | You, in the forest or with the harvesters |
 | `og-image.jpg` | 1200×630 | Share image for WhatsApp/social previews (replace the file) |
-| `apple-touch-icon.png` (180×180), `favicon-32.png`, `../favicon.svg` | | Logo/icons |
+| `apple-touch-icon.png` (180×180), `favicon-32.png` | | Logo/icons |
 
 Review photos are optional: put the file anywhere in `images/` and set `photo = "images/review-1.jpg"` in the config.
 Compress photos (aim for under 150 KB each) to keep the page fast.
