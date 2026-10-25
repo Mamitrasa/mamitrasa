@@ -232,7 +232,7 @@ def forest():
     return f'''<section class="section" id="hutan" aria-labelledby="h-hutan">
 <div class="container">
 <h2 id="h-hutan">Dari Hutan Baduy, Bukan dari Pabrik</h2>
-<p class="lead">Madu Mamitrasa berasal dari lebah liar di hutan Baduy, Lebak, Banten. Kami bekerja langsung dengan para pemanen, memanen secukupnya, dan membotolkannya tanpa campuran apa pun. Setiap panen kami rekam dan bagikan di TikTok {e(biz["tiktok_handle"])}.</p>
+<p class="lead">Madu Mamitrasa berasal dari lebah liar di hutan Baduy, Lebak, Banten. Kami bekerja langsung dengan para pemanen, memanen secukupnya, dan membotolkannya tanpa campuran apa pun.</p>
 <div class="forest-media">
 <div class="video">{facade}</div>
 <ul class="photos" role="group" aria-label="Foto panen madu, geser untuk melihat lainnya" tabindex="0">{photos}</ul>
