@@ -1,0 +1,158 @@
+# =====================================================================
+# Mamitrasa landing page - ALL business details live in this file.
+#
+# After editing, run:   python3 build.py
+# That regenerates index.html, sitemap.xml and robots.txt.
+#
+# Rules of thumb:
+#   * Leave a value as "" (empty) and the page shows a visible
+#     placeholder such as [harga], so nothing looks finished by accident.
+#   * Prices are plain integers in Rupiah (99000), 0 = not set yet.
+#   * Badges for certifications (halal, PIRT, lab test) stay HIDDEN until
+#     you fill in their value.
+# =====================================================================
+
+[business]
+# Owner's name, used in the "Tentang Mamitrasa" section.
+owner_name = ""
+
+# WhatsApp number WITHOUT the leading 0 or 62, digits only.
+# Example: for 0812-3456-7890 write "81234567890".
+whatsapp = ""
+
+# TikTok profile (also used for the "Lihat video lainnya" link).
+tiktok_profile_url = "https://www.tiktok.com/@mamitrasa7"
+tiktok_handle = "@mamitrasa7"
+
+# Link to your TikTok Shop store (used by every "Beli di TikTok Shop" button).
+# If empty, those buttons fall back to your TikTok profile.
+tiktok_shop_url = ""
+
+# Public address or service area shown in the footer, e.g. "Rangkasbitung, Lebak, Banten".
+address = ""
+
+# Name shown in the footer copyright line.
+legal_name = "Mamitrasa Tradisional Indonesia"
+
+# Copyright year. Leave empty to use the current year at build time.
+year = ""
+
+# Set to true ONLY if the Mamitrasa trademark is officially registered.
+# When true, a (R) symbol is shown after the brand name in the footer.
+trademark_registered = false
+
+# Final public URL of the site, no trailing slash, e.g. "https://mamitrasa.com"
+# Used for canonical URL, Open Graph, sitemap and structured data.
+site_url = ""
+
+[shop]
+# Payment methods, free text. Example: "transfer bank, QRIS, atau COD"
+payment_methods = ""
+
+# Couriers, free text. Example: "JNE, J&T, dan SiCepat"
+couriers = ""
+
+# Delivery estimate for Jabodetabek. Example: "1-2 hari"
+delivery_estimate_jabodetabek = ""
+
+# Areas where cash-on-delivery works. Also used in the meta description.
+cod_areas = "Banten & Jakarta"
+
+# Answer to "Berapa lama madu bisa disimpan?". Write the real figure from
+# your own product knowledge / label. Example: "Tahan hingga 2 tahun jika disimpan dengan benar."
+shelf_life = ""
+
+[certificates]
+# Halal MUI/BPJPH certificate number. Empty = badge hidden.
+halal_number = ""
+
+# PIRT number. Empty = badge hidden.
+pirt_number = ""
+
+# Lab test result. Fill ONE of these once you have a result; empty = hidden.
+# A link to the PDF/page (e.g. "files/hasil-uji-lab.pdf") ...
+lab_result_url = ""
+
+# ... and the name of the lab, shown next to the link (optional).
+lab_name = ""
+
+# ---------------------------------------------------------------------
+# Products. Order matters: card 1..4 use WhatsApp source codes
+# WEB-P1 .. WEB-P4. Keep exactly four, or remove cards you do not sell
+# (codes then shift, so keep the order if you want stable tracking).
+# ---------------------------------------------------------------------
+
+[[products]]
+name = "Madu Hutan Baduy"
+volume = ""                      # e.g. "250 ml"
+volume_hint = "ukuran 1"         # placeholder text shown while volume is empty
+price = 0                        # Rupiah, e.g. 99000
+description = "Cocok untuk mencoba."
+badge = ""
+tiktok_url = ""                  # optional product link on TikTok Shop
+wa_item = ""                     # empty = "pesan <volume>"
+
+[[products]]
+name = "Madu Hutan Baduy"
+volume = ""
+volume_hint = "ukuran 2"
+price = 0
+description = "Pilihan favorit keluarga."
+badge = "Terlaris"
+tiktok_url = ""
+wa_item = ""
+
+[[products]]
+name = "Paket Stok Keluarga"
+volume = "2-3 botol"
+volume_hint = "ukuran"
+price = 0
+description = "Lebih hemat per botol."
+badge = ""
+tiktok_url = ""
+wa_item = "Paket Stok Keluarga"
+
+[[products]]
+name = "Paket Hadiah"
+volume = ""
+volume_hint = "isi paket"
+price = 0
+description = "Kemasan rapi untuk orang tua atau sahabat."
+badge = ""
+tiktok_url = ""
+wa_item = "Paket Hadiah"
+
+# ---------------------------------------------------------------------
+# Buyer reviews (3-6). Entries with sample = true ALWAYS render with the
+# label "CONTOH - ganti dengan ulasan asli". Replace the sample entries
+# with real ones and set sample = false. Delete all entries to hide the section.
+# ---------------------------------------------------------------------
+
+[[reviews]]
+quote = "Contoh kutipan ulasan. Tulis kata-kata pembeli yang asli di sini."
+name = "Nama Pembeli"
+city = "Kota"
+photo = ""                       # optional, e.g. "images/review-1.jpg"
+sample = true
+
+[[reviews]]
+quote = "Contoh kutipan ulasan. Tulis kata-kata pembeli yang asli di sini."
+name = "Nama Pembeli"
+city = "Kota"
+photo = ""
+sample = true
+
+[[reviews]]
+quote = "Contoh kutipan ulasan. Tulis kata-kata pembeli yang asli di sini."
+name = "Nama Pembeli"
+city = "Kota"
+photo = ""
+sample = true
+
+# ---------------------------------------------------------------------
+# TikTok video shown in the "Dari Hutan Baduy" section.
+# Paste the full video URL, e.g. https://www.tiktok.com/@mamitrasa7/video/7123456789012345678
+# Empty = the thumbnail simply links to your TikTok profile.
+# ---------------------------------------------------------------------
+[video]
+tiktok_video_url = ""
