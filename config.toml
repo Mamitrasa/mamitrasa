@@ -18,7 +18,7 @@ owner_name = ""
 
 # WhatsApp number WITHOUT the leading 0 or 62, digits only.
 # Example: for 0812-3456-7890 write "81234567890".
-whatsapp = ""
+whatsapp = "81808989567"
 
 # TikTok profile (also used for the "Lihat video lainnya" link).
 tiktok_profile_url = "https://www.tiktok.com/@mamitrasa7"
